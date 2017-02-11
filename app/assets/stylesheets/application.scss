@@ -16,3 +16,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+.alert {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
