@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:search]
+      @products = Product.search(params[:search])
+    else
+      @products = Product.all
+    end
   end
   def show
     @product = Product.find(params[:id])
@@ -12,7 +16,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "你已成功将 #{@product.title} 加入购物车"
     else
       flash[:warning] = "你的购物车内已有此物品"
-    end  
+    end
       redirect_to :back
   end
 end
