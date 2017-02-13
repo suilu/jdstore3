@@ -14,6 +14,19 @@
           </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
+                <%= form_tag products_path, :method => "get" do %>
+                    <div class="searchform">
+                       <%= text_field_tag :search, params[:search], placeholder: "Searching...", class: "searchbox"%>
+                        <span>
+                          <button type="submit" class="btn2 btn2-default nav-search">
+                               <span class="glyphicon glyphicon-search"></span>
+                          </button>
+                           <!-- <input type="submit" value="点 击" class="mike"> -->
+                        </span>
+                    </div>
+                  <% end %>
+              </li>
+              <li>
                 <%= link_to carts_path do  %>
               <button >  <span class="glyphicon glyphicon-shopping-cart"></span> ( <%= current_cart.products.count %> ) Cart
                 </button>
@@ -64,6 +77,45 @@
   background-color: #707477;
 }
 
+.searchform{
+  position: relative;
+  min-height: 10px;
+  margin: 10px auto 0 auto;
+  text-align: left;
+}
+.searchbox{
+  float: left;
+  width: 300px;
+  height: 35px;
+  padding: 9px 7px;
+  font: 16px arial;
+  border: 1px solid #b8b8b8;
 
+}
+.btn2 {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn2-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
 
 </style>
