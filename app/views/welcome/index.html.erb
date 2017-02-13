@@ -5,8 +5,10 @@
     <h1>Lucky Dog</h1>
     <p><em>The best<br>
     service to your pets</em></p>
-    <button class="btn btn-lg"><em>  <%= link_to("Shop Now", products_path) %></em> <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+    <button class="btn btn-lg1"><em>  <%= link_to("Shop Now", products_path) %></em> <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
   </div>
+
+
 
 
 <div class="container">
@@ -71,6 +73,74 @@
   </div>
 </div><br>
 
+<div class="container-4 text-center">
+ <h2 class="widget-title">
+
+   Pricing
+   </h2>
+ <h4>Choose a payment plan that works for you</h4>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
+<div class="panel-body"><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcnwi2752pj307n053q2x.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+
+  <h4><em> Published on Februery</em></h4>
+  <p></p>
+</div>
+<div class="col-sm-6">
+<div class="panel-body"><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcnwi2752pj307n053q2x.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+</div>
+
+</div>
+<div class="container-7" >
+<h1 class="widget-title">Customer Reviews</h1>
+
+<div class="flex-content"><img width="148" height="148" src="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg" class="bne-testimonial-featured-image circle wp-post-image" alt=" " srcset="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1-119x119.jpg 119w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg 148w" sizes="(max-width: 148px) 100vw, 148px" draggable="false"><h3 class="bne-testimonial-heading">Mary Willis</h3><div class="bne-testimonial-description"><p>I was looking for a coffee machine that is not too pricy for my limited budget, but at the same time not too cheap. Because everyone knows, that no good quality and durability are attached to a low price tag. Here I've found hundreds of choices, so I was easily able...</p>
+</div><div class="clear"></div></div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 </body>
 
 <style>
@@ -184,11 +254,26 @@
 .container-1 h1{
   font-size: 100px;
 }
-hr {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border: 0;
-    border-top: 2px solid #ff8a2b;
+.btn-lg1 {
+    color: #fff;//字体颜色
+    background-color: #ff8a2b;//背景颜色
+    border-color: #EF6C00;//边框颜色
+}
+.container-7 h3{
+  font-family: Playfair Display;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: 0px;
+    color: #ff8a2b;
+    margin-left: 520px;
+}
+.container-7 h1{
+    margin-left: 420px;
+}
+.container-7 img{
+    margin-left: 500px;
 }
 
  </style>
