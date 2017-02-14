@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
+
  namespace :admin do
+   resources :products
    resources :orders do
     member do
        post :cancel
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
    end
  end
 
-  namespace :account do
+
     resources :orders do
     member do
       post :pay_with_alipay
@@ -20,14 +22,14 @@ Rails.application.routes.draw do
       post :apply_to_cancel
     end
   end
-  end
+
 
   resources :products do
     member do
       post :add_to_cart
-
     end
   end
+
   resources :cart_items
   resources :orders
   resources :carts do
@@ -36,5 +38,9 @@ Rails.application.routes.draw do
       post :checkout
     end
   end
+
+  namespace :account do
+   resources :orders
+ end
   get '/about/', to: 'about#index'
 end
