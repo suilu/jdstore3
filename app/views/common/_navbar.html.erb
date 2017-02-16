@@ -28,8 +28,9 @@
               </li>
               <li>
                 <%= link_to carts_path do  %>
-              <button >  <span class="glyphicon glyphicon-shopping-cart"></span> ( <%= current_cart.products.count %> ) Cart
+              <button>  <span class="glyphicon glyphicon-shopping-cart"></span> ( <%= current_cart.products.count %> ) Cart
                 </button>
+
               <% end %>
             </li>
               <% if !current_user %>
