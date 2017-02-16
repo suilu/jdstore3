@@ -1,57 +1,164 @@
-<div class="row">
-  <% @products.each do |product| %>
-  <div class="col-xs-6 col-md-3 ">
-    <%= link_to product_path(product) do %>
-    <% if product.image.present? %>
-      <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+
+<section>
+  <h2>Gold Retriever</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Gold Retriever")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
     <% end %>
     <% end %>
-    <div class="text-center">
-    <%= product.title %> $ <%= product.price %>
-
+    <% end %>
   </div>
+</section>
+
+
+<section>
+   <h2>Samoa</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Samoa")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
   </div>
-  <% end %>
-</div>
+</section>
 
 
-<div class="first col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 post-660 product type-product status-publish has-post-thumbnail product_cat-coffee-beans product_cat-coffee-capsules product_cat-coffee-grinders product_cat-grinder-burrs product_cat-ground-coffee product_tag-beans product_tag-coffee product_tag-coffee-capsules product_tag-ground-coffee has-thumb  instock shipping-taxable purchasable product-type-simple">
-<div class="block_product_thumbnail"><a href="https://ld-wp.template-help.com/woocommerce_58649/product/douwe-egberts-douwe-egberts-filter-blend/" class="woocommerce-LoopProduct-link"><img width="370" height="370" src="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-370x370.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="8" srcset="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-150x150.jpg 150w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-300x300.jpg 300w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-562x562.jpg 562w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-119x119.jpg 119w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-370x370.jpg 370w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-574x575.jpg 574w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-198x198.jpg 198w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8-400x400.jpg 400w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/03/8.jpg 1000w" sizes="(max-width: 370px) 100vw, 370px"></a></div><ul class="product-tags"><li><a href="https://ld-wp.template-help.com/woocommerce_58649/product-tag/beans/" rel="tag">Beans</a>,</li> <li><a href="https://ld-wp.template-help.com/woocommerce_58649/product-tag/coffee/" rel="tag">Coffee</a>,</li> <li><a href="https://ld-wp.template-help.com/woocommerce_58649/product-tag/coffee-capsules/" rel="tag">Coffee Capsules</a>,</li> <li><a href="https://ld-wp.template-help.com/woocommerce_58649/product-tag/ground-coffee/" rel="tag">Ground coffee</a></li></ul><h3>Douwe Egberts Douwe Egberts Filter Blend</h3>
-<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>22</span></span>
-<a href="/woocommerce_58649/product-tag/ground-coffee/?add-to-cart=660" rel="nofollow" data-product_id="660" data-product_sku="" data-quantity="1" class="add_to_cart_button button product_type_simple add_to_cart_button ajax_add_to_cart"><span class="product_actions_tip add_to_cart_button__text add">Add to cart</span><span class="product_actions_tip add_to_cart_button__text added">Added to cart!</span></a>
-<div class="star-rating" title="Rated 4.5 out of 5"><span style="width:90%"><strong class="rating">4.5</strong> out of 5</span></div><div class="block_wishlist_compare">
-<div class="yith-wcwl-add-to-wishlist add-to-wishlist-660">
-<div class="yith-wcwl-add-button show" style="display:block">
-<a href="/woocommerce_58649/product-tag/ground-coffee/?add_to_wishlist=660" rel="nofollow" data-product-id="660" data-product-type="simple" class="add_to_wishlist">
-<span class="product_actions_tip add_to_wishlist_button__text add">
-Add to Wishlist </span>
-</a>
-<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="uil-ring ajax-loading">
-<circle cx="50" cy="50" r="40" stroke-dasharray="163.36281798666926 87.9645943005142" fill="none" stroke-width="20" transform="rotate(94.2344 50 50)">
-<animateTransform attributeName="transform" type="rotate" values="0 50 50;180 50 50;360 50 50;" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" begin="0s"></animateTransform>
-</circle>
-</svg> </div>
-<div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-<span class="product_actions_tip add_to_wishlist_button__text browse">
-<span class="feedback">Product added!</span>
-<a href="https://ld-wp.template-help.com/woocommerce_58649/wishlist/view/" rel="nofollow">
-Browse Wishlist </a>
-</span>
-</div>
-<div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
-<span class="product_actions_tip add_to_wishlist_button__text browse">
-<span class="feedback">The product is already in the wishlist!</span>
-<a href="https://ld-wp.template-help.com/woocommerce_58649/wishlist/view/" rel="nofollow">
-Browse Wishlist </a>
-</span>
-</div>
-<div style="clear:both"></div>
-<div class="yith-wcwl-wishlistaddresponse"></div>
-</div><span class="compare" data-id="660" data-nonce="e8617c5092"><span class="product_actions_tip add_to_compare_button__text"><span class="text">Add to Compare</span></span><svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="uil-ring ajax-loading">
-<circle cx="50" cy="50" r="40" stroke-dasharray="163.36281798666926 87.9645943005142" fill="none" stroke-width="20" transform="rotate(94.2344 50 50)">
-<animateTransform attributeName="transform" type="rotate" values="0 50 50;180 50 50;360 50 50;" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" begin="0s"></animateTransform>
-</circle>
-</svg></span></div>
-</div>
+<section>
+   <h2>Shepherd dog</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Shepherd dog")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+
+<section>
+   <h2>Tidy</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Tidy")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+
+<section>
+   <h2>Pomeranians</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("Pomeranians")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+
+<section>
+   <h2>corgis</h2>
+  <div class="container-fluid">
+    <% if  @products.present? %>
+    <% @products.order('created_at DESC').each do |product| %>
+    <% if  true == product.categories.eql?("corgis")%>
+    <div class="col-xs-6 col-md-3">
+      <div id="item">
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, size: "200x200")%>
+      <% else %>
+        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+        <% end %>
+        <% end %>
+        <br><br>
+        <%= product.title %>
+        <br>
+        ￥<%= product.price %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
