@@ -20,21 +20,39 @@
             </div>
         </div>
 
-
         <div class="container-1">
             <div class="row1">
                 <p>
-                    &nbsp; The warmest <br>
-                     accompany to you</p>
+                    &nbsp; The warmest
+                    <br>
+                    accompany to you</p>
             </div>
 
             <button type="button" class="btn btn-primary btn-round-lg btn-lg">
 
-                  <%= link_to("Shop Now", products_path) %>
+                <a href="/products"><strong>Shop Now</strong></a>
             </button>
         </div>
 
+        <!-- search for -->
 
+        <div class="searchfor">
+
+            <%= form_tag products_path, :method => "get" do %>
+            <div class="searchform">
+                <%= text_field_tag :search, params[:search], placeholder: "Searching...", class: "searchbox"%>
+                <span>
+                    <button type="submit" class="btn2 btn2-default nav-search">
+                        <span >Search</span>
+
+                    </button>
+                    <!-- <input type="submit" value="点 击" class="mike"> -->
+                </span>
+            </div>
+            <% end %>
+
+        </div>
+        <!-- title -->
         <div class="container">
             <div class="container-4 text-center">
                 <h1 class="widget-title">
@@ -174,16 +192,15 @@
         </div>
     </div>
 
-
-
 </body>
 
 <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */
 
     /* Remove the jumbotron's default bottom margin */
-    .row1{
-      margin-top: 34px;
+    .row1 {
+        margin-top: 34px;
+
     }
     .row2 {
         margin: 15px -2000px 20px -15px;
@@ -197,34 +214,35 @@
         font-size: 25px;
         color: #000;
     }
-.container-1 .btn{
-  background-color: #f65e65;
+    .container-1 .btn {
+        background-color: #f65e65;
 
-}
-.container-1 .btn-round-lg{
-  border-radius: 22.7px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 3px;
-  margin-top: 80px;
-  margin-left: 50px;
-  font-size: 30px;
+    }
+    .container-1 .btn-round-lg {
+        border-radius: 22.7px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 3px;
+        margin-top: 80px;
+        margin-left: 50px;
+        font-size: 30px;
 
-}
+    }
     .container-1 {
 
         margin-right: -15px;
         margin-left: -15px;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
         width: auto;
 
         height: 600px;
 
-        font-family: serif;
-        padding-left: 200px;
+      font-family: sans-serif;
+        padding-left: 100px;
         font-size: 50px;
         padding-top: 110px;
         background-image: url("https://ww2.sinaimg.cn/large/006tNc79gy1fcozfd29q2j315o0gotip.jpg");
+        background-repeat:round;
     }
 
     /* Add a gray background color and some padding to the footer */
@@ -232,21 +250,7 @@
         background-color: #c0c0c0;
         padding: 25px;
     }
-    .btn {
-        padding: 10px 20px;
-        background-color: #333;
-        color: #f1f1f1;
-        border-radius: 0;
-        transition: 0.2s;
-    }
 
-    /* On hover, the color of .btn will transition to white with black text */
-    .btn:focus,
-    .btn:hover {
-        border: 1px solid #333;
-        background-color: #fff;
-        color: #000;
-    }
     .thumbnail {
         padding: 0 0 15px;
         border: none;
@@ -310,6 +314,7 @@
 
     }
     .container-4 {
+        margin-top: 80px;
         margin-bottom: 60px;
     }
     .container-5 {
@@ -364,5 +369,58 @@
     .container-1 .row1 {
         color: #fff;
     }
+    /*  search for */
+    .searchform {
+        position: relative;
+
+        text-align: center;
+    }
+    .searchbox {
+
+        height: 45px;
+        width: 600px;
+        font: 16px arial;
+        border: 1px solid #b8b8b8;
+
+    }
+    .btn2 {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        margin-left: -4px;
+        margin-top: -2px;
+        font-size: 20px;
+        line-height: 1.42857143;
+        padding: 10px 30px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius: 1.5px;
+    }
+    .btn2:focus,
+    .btn2:hover {
+        border: 1px solid #f65e65;
+        background-color: #fff;
+        color: #000;
+    }
+    .btn2-default {
+        color: #fff;
+        background-color: #f65e65;
+        border-color: #f65e65;
+    }
+    .btn  a{
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+
 
 </style>

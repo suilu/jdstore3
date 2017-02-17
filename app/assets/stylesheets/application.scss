@@ -122,3 +122,18 @@
   background-color: #323232;
 
 }
+.btn {
+    padding: 10px 20px;
+    background-color: #f65e65;
+    color: #fff;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn:focus,
+.btn:hover {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+}
