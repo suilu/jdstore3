@@ -4,4 +4,6 @@ class Product < ApplicationRecord
    where("title LIKE ?", "%#{search}%").or(where("description LIKE ?", "%#{search}%"))
  end
  has_many :comments, dependent: :destroy
+ has_many :favorites
+ has_many :fans, through: :favorites, source: :user 
 end
