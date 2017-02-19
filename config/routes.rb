@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   root 'welcome#index'
   devise_for :users
 
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
     member do
       post :add_to_cart
     end
+    resources :comments
   end
 
   resources :cart_items

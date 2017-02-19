@@ -3,4 +3,5 @@ class Product < ApplicationRecord
   def self.search(search)
    where("title LIKE ?", "%#{search}%").or(where("description LIKE ?", "%#{search}%"))
  end
+ has_many :comments, dependent: :destroy
 end
