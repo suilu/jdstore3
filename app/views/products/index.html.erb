@@ -29,12 +29,13 @@
 
         <button type="button" class="btn btn-primary btn-round-lg btn-lg">
 
-            <a href="/"><strong>Back</strong></a>
+            <a href="/">
+                <strong>Back</strong>
+            </a>
         </button>
     </div>
 
-
-<!-- products -->
+    <!-- products -->
     <div class="container-3">
 
         <section>
@@ -52,7 +53,7 @@
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
                                 <% if product.image.present? %>
-                                <div class="panel-body"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fcoyiu9h4ij306m05ogmo.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -61,12 +62,12 @@
 
                             <div class="panel-footer">
 
-<h1>$<%= product.price %></h1>
+                                <h1>$<%= product.price %></h1>
                                 <h3><%= product.title %></h3>
-                                <p>Detact thingsjgongonhnhhhoh<br>ifhihgihogigjg
+                                <p>Details<br>fex
                                 </p>
 
-                                <button class="btn btn-lg"><%= link_to("Shop Now", products_path) %></button>
+                                <button class="btn btn-lg"><%= link_to("Add to cart") %></button>
                             </div>
                         </div>
                     </div>
@@ -80,56 +81,69 @@
         <section>
             <h2>Tidy</h2>
             <hr>
-            <div class="container-fluid">
-                <% if  @products.present? %>
-                <% @products.order('created_at DESC').each do |product| %>
-                <% if  true == product.categories.eql?("Tidy")%>
-                <div class="col-xs-6 col-md-3">
-                    <div id="item">
-                        <%= link_to product_path(product) do %>
-                        <% if product.image.present? %>
-                        <%= image_tag(product.image.thumb.url, size: "200x200")%>
-                    <% else %>
-                        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
-                        <% end %>
-                        <% end %>
-                        <br><br>
-                        <%= product.title %>
-                        <br>
-                        ￥<%= product.price %>
+            <div class="container">
+                <div class="row">
+                    <% if  @products.present? %>
+                    <% @products.order('created_at DESC').each do |product| %>
+                    <% if  true == product.categories.eql?("Tidy")%>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="panel panel-primary text-center">
+                            <div class="panel-body">
+                                <%= link_to product_path(product) do %>
+                                <% if product.image.present? %>
+                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                            <% else %>
+                                <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                            <div class="panel-footer">
+                                <h1>$<%= product.price %></h1>
+                                <h3><%= product.title %></h3>
+                                <p>Details<br>fex
+                                </p>
+                                <button class="btn btn-lg"><%= link_to("Add to cart") %></button>
+                            </div>
+                        </div>
                     </div>
+                    <% end %>
+                    <% end %>
+                    <% end %>
                 </div>
-                <% end %>
-                <% end %>
-                <% end %>
             </div>
         </section>
 
         <section>
             <h2>Golden Retriever</h2>
             <hr>
-            <div class="container-fluid">
-                <% if  @products.present? %>
-                <% @products.order('created_at DESC').each do |product| %>
-                <% if  true == product.categories.eql?("Gold Retriever")%>
-                <div class="col-xs-6 col-md-3">
-                    <div id="item">
-                        <%= link_to product_path(product) do %>
-                        <% if product.image.present? %>
-                        <%= image_tag(product.image.thumb.url, size: "200x200")%>
-                    <% else %>
-                        <%=image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
-                        <% end %>
-                        <% end %>
-                        <br><br>
-                        <%= product.title %>
-                        <br>
-                        ￥<%= product.price %>
+            <div class="container">
+                <div class="row">
+                    <% if  @products.present? %>
+                    <% @products.order('created_at DESC').each do |product| %>
+                    <% if  true == product.categories.eql?("Golden Retriever")%>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="panel panel-primary text-center">
+                            <div class="panel-body">
+                                <%= link_to product_path(product) do %>
+                                <% if product.image.present? %>
+                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                            <% else %>
+                                <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
+                                <% end %>
+                                <% end %>
+                            </div>
+                            <div class="panel-footer">
+                                <h1>$<%= product.price %></h1>
+                                <h3 class="text-center"><%= product.title %></h3>
+
+                                <button class="btn btn-lg"><%= link_to("Add to cart") %></button>
+                            </div>
+                        </div>
                     </div>
+                    <% end %>
+                    <% end %>
+                    <% end %>
                 </div>
-                <% end %>
-                <% end %>
-                <% end %>
             </div>
         </section>
 
@@ -209,7 +223,7 @@
                         <br><br>
                         <%= product.title %>
                         <br>
-                        ￥<%= product.price %>
+                        ¥<%= product.price %>
                     </div>
                 </div>
                 <% end %>
@@ -334,21 +348,21 @@
             margin-top: 25px;
             background-color: #f65e65;
         }
-        h1{
-          font-size: 40px;
-          font-weight: bold;
-          margin-top: 0px;
-          color: #f65e65;
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 0;
+            color: #f65e65;
         }
-        h3{
-          margin-top: 0px;
-          text-align: left;
-          margin-left: 8px;
+        h3 {
+            margin-top: 0;
+            text-align: left;
+            margin-left: 8px;
         }
-        .container-3 p{
-          text-align: left;
-          color: #c7c7c7;
-          height: 15px;
+        .container-3 p {
+            text-align: left;
+            color: #c7c7c7;
+            height: 15px;
         }
         .container .col-md-3 .item {
             background-color: #fff;
@@ -367,8 +381,6 @@
             background-color: #fff !important;
             color: #f65e65;
         }
-
-
 
         .panel-footer {
             background-color: #fff !important;
@@ -389,9 +401,9 @@
             color: #fff;
 
         }
-        .btn  a{
-          color: #fff;
-          font-family: sans-serif;
+        .btn a {
+            color: #fff;
+            font-family: sans-serif;
         }
 
     </style>
