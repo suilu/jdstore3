@@ -53,6 +53,15 @@
                   <% end %>
                 </button>
   							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                  <h3 class="comments_title">
+                    <%= @product.comments.count %> Comments
+                  </h3>
+                  <hr>
+                  <div id="comments">
+                    <%= render @product.comments%>
+                    <%= render "comments/form"%>
+
+              </div>
   						</div>
   					</div>
   				</div>
@@ -74,7 +83,7 @@
                     Chicago, US</p>
                 <p>
                     <span class="glyphicon glyphicon-phone"></span>
-                    +00 1234567</p>
+                    00 1234567</p>
                 <p>
                     <span class="glyphicon glyphicon-envelope"></span>
                     Luck-Dog@gmail.com</p>
