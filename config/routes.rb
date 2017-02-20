@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    resources :story
   resources :comments
   root 'welcome#index'
   devise_for :users
