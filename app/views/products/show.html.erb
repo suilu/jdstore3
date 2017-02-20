@@ -41,7 +41,7 @@
               <div>
                 数量 :　<%= @product.quantity %>
               </div>
-  						<h4 class="price">current price: <span>$ <%= @product.price %></span></h4>
+  						<h4 class="price">淘狗价: <span>¥ <%= @product.price %></span></h4>
 
 
   						<div class="action">
@@ -68,15 +68,15 @@
                       <%= link_to("Favor", favorites_path(product_id: @product), method: :post) %>
                       </button>
                 <% end %>
-
-                  <h3 class="comments_title">
+<div>
+                  <h3 class="comments_title ">
                     <%= @product.comments.count %> Comments
                   </h3>
                   <hr>
                   <div id="comments">
                     <%= render @product.comments%>
                     <%= render "comments/form"%>
-
+</div>
               </div>
   						</div>
   					</div>
@@ -87,42 +87,6 @@
     </body>
 
 
-    <div class="container-fluid1">
-        <h1 class="text-center">
-            <em>CONTACT</em>
-        </h1>
-        <div class="row">
-            <div class="col-sm-5 container-8">
-                <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p>
-                    <span class="glyphicon glyphicon-map-marker"></span>
-                    Chicago, US</p>
-                <p>
-                    <span class="glyphicon glyphicon-phone"></span>
-                    00 1234567</p>
-                <p>
-                    <span class="glyphicon glyphicon-envelope"></span>
-                    Luck-Dog@gmail.com</p>
-            </div>
-            <div class="col-sm-5 container-9">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
   <style >
   /*****************globals*************/
@@ -131,7 +95,7 @@
     overflow-x: hidden; }
 
   img {
-    max-width: 100%; }
+    max-width: 370px; }
 
   .preview {
     display: -webkit-box;
