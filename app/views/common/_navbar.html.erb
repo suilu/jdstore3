@@ -12,7 +12,7 @@
               <%= link_to("Products", products_path) %>
             </li>
             <li >
-              <%= link_to("Story", products_path) %>
+              <%= link_to("Story", story_index_path) %>
             </li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -37,8 +37,8 @@
                   <li><%= link_to("Admin 选单", admin_products_path ) %></li>
                   <% end %>
                   <li> <%= link_to("个人订单列表", account_orders_path ) %> </li>
-                  <li><%= link_to("My Favorites", account_favorites_path) %></li>  
-                  <li> <%= link_to(content_tag(:i, "登出", class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
+                  <li><%= link_to("My Favorites", account_favorites_path) %></li>
+                  <li class="signout"> <%= link_to(content_tag(:i, "登出", class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
                 </ul></li>
                 <% end %>
             </ul>
@@ -102,6 +102,9 @@
  }
  .navbar-default .navbar-nav i{
    color: #fff;
+ }
+.dropdown-menu .signout i{
+   color: #000;
  }
 
 
