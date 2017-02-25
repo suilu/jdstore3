@@ -52,8 +52,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -91,8 +91,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -125,8 +125,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -159,8 +159,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -193,8 +193,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
@@ -227,8 +227,8 @@
                         <div class="panel panel-primary text-center">
                             <div class="panel-body">
                                 <%= link_to product_path(product) do %>
-                                <% if product.image.present? %>
-                                <div class="panel-body"><%= image_tag(product.image.thumb.url, size: "200x200")%></div>
+                                <% if product.photos.present? %>
+                                <div class="panel-body"><%= image_tag(product.photos[0].avatar.thumb.url, size: "200x200")%></div>
                             <% else %>
                                 <%=image_tag("http://placehold.it/200x200&text=No Pic") %>
                                 <% end %>
