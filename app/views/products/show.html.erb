@@ -40,7 +40,7 @@
                                                 <%= image_tag("http://placehold.it/200x200&text=No Pic" ) %>
                                                 <% end %>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -118,6 +118,8 @@
                                 <%= link_to("Favor", favorites_path(product_id: @product), method: :post) %>
                             </button>
                             <% end %>
+
+                            <p><%= social_share_button_tag(@product.title) %></p>
                             <div>
                                 <h3 class="comments_title ">
                                     <%= @product.comments.count %>

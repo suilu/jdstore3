@@ -12,11 +12,25 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
+@import "social-share-button";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
 /****** LOGIN MODAL ******/
 .loginmodal-container {
   padding: 30px;
@@ -136,4 +150,16 @@
     border: 1px solid #333;
     background-color: #fff;
     color: #333;
+}
+
+
+$size: 30px;
+.action{
+  .social-share-button {
+    .ssb-icon {
+      background-size: $size $size;
+      height: $size;
+      width: $size;
+    }
+  }
 }
