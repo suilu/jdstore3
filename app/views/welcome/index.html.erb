@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <body>
-    <div class="containter ">
-        <div class=" row row2 ">
+    <!-- 图标搜索框 -->
+        <div class="row row2 ">
+          <!-- logo and search -->
             <div class="col-sm-5 text-left">
-                <div id="logo" class="logo">
+              <!-- logo  -->
+                <div  class="logo">
                     <a href="/">
                         <i class="fa fa-paw" aria-hidden="true"></i>
                         <span>
@@ -10,59 +13,128 @@
                         </span>
                     </a>
                 </div>
+                <!-- end -->
+
+                <!-- search for -->
+                <div class="search">
+                    <%= form_tag products_path, :method => "get" do %>
+                    <div class="searchform">
+                        <%= text_field_tag :search, params[:search], placeholder: "请输入宠物名称", class: "searchbox"%>
+                        <span>
+                            <button type="submit" class="searchbutton">
+                              <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <% end %>
+                </div>
+                <!-- end search -->
             </div>
-
-
+            <!-- end logo & search -->
         </div>
 
-        <div class="container-1">
+
+
+        <!-- 首页大图 -->
+        <div class="container-photo">
             <div class="row1">
-                <p>
-                    &nbsp; The warmest
-                    <br>
-                    accompany to you</p>
+                <p>&nbsp; The warmest<br>accompany to you</p>
             </div>
 
             <button type="button" class="btn btn-primary btn-round-lg btn-lg">
-
-                <a href="/products"><strong>Shop Now</strong></a>
+                <a href="/products">
+                    <strong>Shop Now</strong></a>
             </button>
-
-
         </div>
 
-        <!-- search for -->
+        <!-- end -->
 
-        <div class="searchfor">
+        <!-- 服务保障 -->
+        <section class="service-promise">
+            <div class="container">
+                <div class="service-title text-center">
+                    <h1>Our services</h1>
+                    <hr>
+                </div>
+                <!-- end general title -->
 
-            <%= form_tag products_path, :method => "get" do %>
-            <div class="searchform">
-                <%= text_field_tag :search, params[:search], placeholder: "Searching...", class: "searchbox"%>
-                <span>
-                    <button type="submit" class="btn2 btn2-default nav-search">
-                        <span >Search</span>
+                <div class="row module-wrapper text-center">
+                    <div class="col-md-3 col-sm-3 why-us">
+                        <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fcupqsp8swj303c02vgli.jpg" alt="">
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p>
+                            <strong>纯种保障</strong>
+                        </p>
+                        <p>签协议保证所售宠物狗为纯种犬，如果出现不纯种问题终身包退换。
+                        </p>
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+                    <!-- our services -->
+                    <div class="col-md-3 col-sm-3 why-us">
+                        <img src="https://ww4.sinaimg.cn/large/006tNc79ly1fcupsl6pqqj303c02vgli.jpg" alt="">
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p> <strong>
+                                健康保证
+                            </strong>
+                        </p>
+                        <p>每一只狗狗必须严格体检后，我们才会出售!</p>
+                        <!--<p>所有宠物包30天专业宠物咨询团队一对一跟踪售后，提供24小时健康咨询。</p>-->
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
 
-                    </button>
-                    <!-- <input type="submit" value="点 击" class="mike"> -->
-                </span>
+                    <div class="col-md-3 col-sm-3 why-us">
+                        <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcuptse2jmj303c02vaa3.jpg" alt="">
+                        <div>
+                            &nbsp;
+                        </div>
+                        <p>
+                            <strong>服务保障</strong>
+                        </p>
+                        <p>不会养！没关系！我们手把手教你！
+                        </p>
+                        <!--<p>一对一宠物咨询服务，手把手教你养狗。在线宠物医生提供实时免费咨询。
+                        </p>-->
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-md-3 col-sm-3 why-us">
+                        <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcupv24kv7j303c02vq2v.jpg" alt="">
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p>
+                            <strong>担保交易</strong>
+                        </p>
+                        <p>享受15天健康担保期，犬瘟细小等疾病退货，宠物与描述不符合退货退款。
+                        </p>
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end module-wrapper -->
             </div>
-            <% end %>
+            <!-- end container -->
+        </section>
 
-        </div>
 
         <!-- title -->
-        <div class="container">
-            <div class="container-4 text-center">
-              <h1 class="widget-title">
-
-                  Top recommend
-              </h1>
-              <!--<h4>
+        <div class="container-hot">
+            <div class=" text-center">
+                <h1 class="widget-title">
+                    Top recommend
+                </h1>
+                <!--<h4>
                   <em>Choose a payment plan that works for you</em>
               </h4>-->
-              <hr>
-              <!-- hot recommend -->
-              <div class="fl">
+                <hr>
+                <!-- hot recommend -->
+                <div class="fl">
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_1.jpg" width="400" height="250"></a>
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_2.jpg" width="250" height="254"></a>
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_3.jpg" width="250" height="254"></a>
@@ -70,106 +142,54 @@
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_6.jpg" width="250" height="254"></a>
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_7.jpg" width="250" height="254"></a>
                     <a href="/products"><img src="http://img1.dog126.com/images/dog_8.jpg" width="250" height="254"></a>
-                   </div>
+                </div>
+            </div>
+        </div>
 
-                 </div>
-               </div>
+        <!-- our promise -->
 
-<!-- our promise -->
-<section class="section white">
-    <div class="container">
-        <div class="general-title text-center">
-            <h1>Our services</h1>
+
+        <!-- customer reviews -->
+        <div class="container-customer text-center">
+            <h1 class="widget-title">
+                <em>Customer reviews</em>
+            </h1>
 
             <hr>
-
+            <div class="flex-content"><img
+                width="148"
+                height="148"
+                src="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg"
+                class="bne-testimonial-featured-image circle wp-post-image"
+                alt=" "
+                srcset="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1-119x119.jpg 119w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg 148w"
+                sizes="(max-width: 148px) 100vw, 148px"
+                draggable="false">
+                <h3 class="bne-testimonial-heading">Miss Li</h3>
+                <div class="bne-testimonial-description">
+                    <p>There is an old man in my family. Children have their own things to do, very few accompany around.
+                        <br>It's hard to find time to pick a dog for my family. Thank you Lucky Dog, let me save a lot of energy. Let my old man more than a loved one!
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
-        <!-- end general title -->
 
-        <div class="row module-wrapper text-center">
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fcupqsp8swj303c02vgli.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>纯种保障</strong>
-                </p>
-                <p>签协议保证所售宠物狗为纯种犬，如果出现不纯种问题终身包退换。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
+        <!-- pets tips -->
 
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww4.sinaimg.cn/large/006tNc79ly1fcupsl6pqqj303c02vgli.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>
-                        健康保证
-                    </strong>
-                </p>
-                <p>所有宠物包30天专业宠物咨询团队一对一跟踪售后，提供24小时健康咨询。</p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
+        <div class="container-tip text-center">
+            <h1 >
+                Pets Tips
+            </h1>
 
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcuptse2jmj303c02vaa3.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>服务保障</strong>
-                </p>
-                <p>一对一宠物咨询服务，手把手教你养狗。在线宠物医生提供实时免费咨询。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
+            <h4>
+                <em>A friend around me and verify my growth</em>
+            </h4>
+            <hr>
 
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcupv24kv7j303c02vq2v.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>担保交易</strong>
-                </p>
-                <p>享受15天健康担保期，犬瘟细小等疾病退货，宠物与描述不符合退货退款。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- end module-wrapper -->
-    </div>
-    <!-- end container -->
-</section>
-
-
-
-
-
-
-
-            <div class="container-5 text-center">
-                <h1 class="widget-title">
-
-                    Pets Tips
-                </h1>
-
-                <h4>
-                    <em>A friend around me and verify my growth</em>
-                </h4>
-                  <hr>
-
-
-            <div class="row3 ">
+            <div >
                 <div class="col-sm-3">
-                    <div class="panel-body"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcong0n2cnj31kw2da1l0.jpg" class="img-responsive"  alt="Image"></div>
+                    <div class="panel-body"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcong0n2cnj31kw2da1l0.jpg" class="img-responsive" alt="Image"></div>
                     <h4 >
                         <em>
                             Published on Februery</em>
@@ -181,347 +201,235 @@
                     <div class="panel-body"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fconv8f3r8j31kw11xx6q.jpg" class="img-responsive" alt="Image"></div>
 
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                        <em>Published on Februery</em>
                     </h4>
                     <p>I was looking for a coffee machine that is not too pricy for my limited budget, but at the same time not too cheap. Because everyone knows,
                         <br>that no good quality and durability are attached to a low price tag.</p>
                 </div>
-
                 <div class="col-sm-3">
                     <div class="panel-body"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fcons2zvcqj31kw11ye85.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                      <em>Published on Februery</em>
                     </h4>
                     <p>I was looking for a coffee machine that is not too pricy for my limited budget.
                     </p>
                 </div>
                 <div class="col-sm-3">
                     <div class="panel-body"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fconzmmymqj31kw11x7wk.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                        <em> Published on Februery</em>
                     </h4>
-
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
-
-    <div class="container-7 text-center">
-        <h1 class="widget-title">
-          <em>Customer reviews</em>
-        </h1>
-
-          <hr>
-
-        <div class="flex-content"><img
-            width="148"
-            height="148"
-            src="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg"
-            class="bne-testimonial-featured-image circle wp-post-image"
-            alt=" "
-            srcset="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1-119x119.jpg 119w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg 148w"
-            sizes="(max-width: 148px) 100vw, 148px"
-            draggable="false">
-            <h3 class="bne-testimonial-heading">Miss Li</h3>
-            <div class="bne-testimonial-description">
-                <p>There is an old man in my family. Children have their own things to do, very few accompany around.
-                  <br>It's hard to find time to pick a dog for my family. Thank you Lucky Dog, let me save a lot of energy. Let my old man more than a loved one!
-                  </p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-
 </body>
 
 <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
+/* Remove the navbar's default rounded borders and increase the bottom margin */
 
-    /* Remove the jumbotron's default bottom margin */
-    .row1 {
-        margin-top: 34px;
+/* Remove the jumbotron's default bottom margin */
+.row1 {
+    margin-top: 34px;
+    background-color: rgb(62, 171, 54);
 
-    }
-    .row2 {
-        margin: 15px -2000px 20px -15px;
-
-    }
-    .row2 i {
-        font-size: 50px;
-        color: #f65e65;
-    }
-    .row2 span {
-        font-size: 25px;
-        color: #000;
-    }
-    .container-1 .btn {
-        background-color: #f65e65;
-
-    }
-    .container-1 .btn-round-lg {
-        border-radius: 22.7px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 3px;
-        margin-top: 80px;
-        margin-left: 50px;
-        font-size: 30px;
-
-    }
-    .container-1 {
-
-        margin-right: -15px;
-        margin-left: -15px;
-        margin-bottom: 60px;
-        width: inherit;
-
-        height: 800px;
-
-      font-family: sans-serif;
-        padding-left: 200px;
-        font-size: 50px;
-        padding-left: 200px;
-        padding-top: 200px;
-        background-image: url("https://ooo.0o0.ooo/2017/02/19/58a99f31c9a57.jpg");
-        background-repeat:round;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    .footer {
-        background-color: #c0c0c0;
-        padding: 25px;
-    }
-
-    .thumbnail {
-        padding: 0 0 15px;
-        border: none;
-        border-radius: 0;
-    }
-
-    .thumbnail {
-        padding: 0 0 15px;
-        border: none;
-        border-radius: 0;
-    }
-
-    .thumbnail img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-    }
-
-    .panel {
-        border: 1px solid #07b0ba;
-        border-radius: 0;
-        transition: box-shadow 0.5s;
-    }
-    .panel:hover {
-        box-shadow: 5px 0 40px rgba(0,0,0, .2);
-    }
-    .panel-footer .btn:hover {
-        border: 1px solid #07b0ba;
-        background-color: #fff !important;
-        color: #07b0ba;
-    }
-
-    .panel-heading {
-        color: #fff !important;
-        background-color: #07b0ba !important;
-        padding: 25px;
-        border-bottom: 1px solid transparent;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .panel-footer {
-        background-color: #fff !important;
-    }
-
-    .panel-footer h3 {
-        font-size: 32px;
-    }
-
-    .panel-footer h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
-
-    .panel-footer .btn {
-        margin: 15px 0;
-        background-color: #07b0ba;
-        color: #fff;
-
-    }
-    .container-4 {
-        margin-top: 100px;
-        margin-bottom: 60px;
-    }
-    .container-5 {
-        margin-top: 20px;
-        margin-bottom: 60px;
-        margin-left: 170px;
-        margin-right: 170px;
-
-    }
-
-
-    .container-1 h1 {
-        font-size: 100px;
-    }
-    .btn-lg1 {
-        color: #fff; //字体颜色
-        background-color: #ff8a2b; //背景颜色
-        border-color: #EF6C00; //边框颜色
-    }
-    .container-7{
-      margin-bottom: 70px;
-    }
-    .container-7 h3 {
-        font-family: 'Playfair Display';
-        font-style: italic;
-        font-weight: 900;
-        font-size: 22px;
-        line-height: 1.3;
-        letter-spacing: 0;
-        color: #f65e65;
-
-    }
-    .container-7 h1 {
-
-        margin-top: 100px;
-        margin-bottom: 30px;
-        font-size: 40px;
-    }
-    .container-7 img {
-      margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .container-7 p {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .bg-grey {
-        margin-top: 60px;
-    }
-
-    .container-8 {
-        margin-top: 30px;
-        margin-bottom: 70px;
-        margin-left: 150px;
-    }
-    .container-9 {
-        margin-top: 20px;
-    }
-
-    .container-1 .row1 {
-        color: #fff;
-    }
-    /*  search for */
-    .searchform {
-        position: relative;
-
-        text-align: center;
-    }
-    .searchbox {
-
-        height: 45px;
-        width: 600px;
-        font: 16px arial;
-        border: 1px solid #b8b8b8;
-
-    }
-    .btn2 {
-        display: inline-block;
-        margin-bottom: 0;
-        font-weight: normal;
-        text-align: center;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        background-image: none;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        margin-left: -4px;
-        margin-top: -2px;
-        font-size: 20px;
-        line-height: 1.42857143;
-        padding: 10px 30px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        border-radius: 1.5px;
-    }
-    .btn2:focus,
-    .btn2:hover {
-        border: 1px solid #f65e65;
-        background-color: #fff;
-        color: #000;
-    }
-    .btn2-default {
-        color: #fff;
-        background-color: #f65e65;
-        border-color: #f65e65;
-    }
-    .btn  a{
-      color: #fff;
-      font-family: sans-serif;
-    }
-
-.section{
-  padding: 80px 0;
 }
-.general-title hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.row2{
+  width: 1300px;
+    margin: 0 auto;
+     margin-top: 50px;
+     margin-bottom: 4px;
+
+
 }
-.container-4 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.row2 .logo{
+  float: left;
+   margin-right: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
 }
-.container-5 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.row2 a{
+  text-decoration: none;
 }
-h4{
-  color: #999999;
+.row2 i {
+    font-size: 50px;
+    color: #f65e65;
 }
-.why-us a{
-  color: #f65e65;
+.row2 span {
+    font-size: 25px;
+    color: #000;
+
 }
-.why-us{
-  margin-top: 40px;
-  font-size: 15px;
+
+/**** 首页大图 ****/
+.container-photo .btn {
+    background-color: #f65e65;
+
 }
-.why-us img{
-  width: 140px;
+.container-photo .btn-round-lg {
+    border-radius: 22.7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 3px;
+    margin-top: 80px;
+    margin-left: 50px;
+    font-size: 30px;
+
 }
-.container-4 .fl{
-  margin-top: 50px;
-  margin-bottom: 60px;
+.container-photo {
+  clear: both;
+
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 60px;
+    width: inherit;
+
+    height: 800px;
+
+    font-family: sans-serif;
+    padding-left: 200px;
+    font-size: 50px;
+    padding-left: 200px;
+    padding-top: 200px;
+    background-image: url("https://ooo.0o0.ooo/2017/02/19/58a99f31c9a57.jpg");
+    background-repeat: round;
+    background-color: rgb(86, 196, 76);
 }
-.container-7 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+
+.container-photo h1 {
+    font-size: 100px;
+}
+.container-photo .row1 {
+    color: #fff;
+}
+
+
+
+/*  search for */
+.search{
+  float: left;
+  width: 450px;
+  position: relative;
+  margin-left: 810px;
+  margin-top: -4.5em;
+
+}
+
+.searchbox {
+    height: 40px;
+    width: 450px;
+    padding: 5px 30px;
+    border-style: solid;
+    border-color: #f65e65;
+    border-radius: 20px;
+    border-width: 2px;
+    font: 14px arial;
+
+
+}
+.searchbutton {
+
+  width:  45px;
+ height: 40px;
+ border:  none;
+ background: none;
+ font-family: "Microsoft YaHei";
+ font-size:  2px;
+ position:  absolute;
+ cursor:  pointer;
+ right: 0;
+ top:  0;
+}
+.searchbutton .fa-search{
+  font-size: 20px;
+}
+
+.btn a {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+
+h4 {
+    color: #999999;
+}
+
+/*** 服务保障 ****/
+.service-promise {
+    padding: 80px 0;
+    background-color: #1ef;
+}
+.container-hot{
+  border-color: #000;
+}
+.container-hot hr {
+    width: 100px;
+    border-width: 3px;
+    margin: 25px auto;
+    border-color: #f65e65;
+}
+.container-hot .fl {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.service-title hr {
+    width: 100px;
+    border-width: 3px;
+    margin: 25px auto;
+    border-color: #f65e65;
+}
+
+/***** customer reviews ******/
+.container-customer {
+  background-color: rgb(78, 188, 236);
+    margin-bottom: 70px;
+}
+.container-customer h3 {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #f65e65;
+
+}
+.container-customer h1 {
+
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.container-customer img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container-customer p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container-customer hr {
+    width: 100px;
+    border-width: 3px;
+    margin: 25px auto;
+    border-color: #f65e65;
+}
+
+/***** pets tips *****/
+.container-tip {
+  background-color: #f65e65;
+    margin: 20px 170px 60px;
+
+}
+
+.container-tip hr {
+    width: 100px;
+    border-width: 3px;
+    margin: 25px auto;
+    border-color: #f65e65;
 }
 
 </style>
