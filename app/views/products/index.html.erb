@@ -44,7 +44,7 @@
             <h2>萨摩耶</h2>
             <hr>
 
-            <div class="container">
+            <div class="container-dog">
                 <div class="row">
                     <% if  @products.present? %>
                     <% @products.order('created_at DESC').each do |product| %>
@@ -339,20 +339,20 @@
             font-weight: bold;
 
             text-align: center;
-            font-size: 40px;
+            font-size: 25px;
 
         }
         hr {
 
-            height: 5px;
-            width: 200px;
+            height: 3px;
+            width: 150px;
 
             margin-bottom: 70px;
             margin-top: 25px;
             background-color: #f65e65;
         }
         h1 {
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
             margin-top: 0;
             color: #f65e65;
@@ -367,14 +367,13 @@
             color: #c7c7c7;
             height: 15px;
         }
-        .container .col-md-3 .item {
-            background-color: #fff;
 
-        }
         .panel {
             border: 1px solid #f65e65;
             border-radius: 0;
             transition: box-shadow 0.5s;
+            height: 460px;
+
         }
         .panel:hover {
             box-shadow: 5px 0 40px rgba(0,0,0, .2);
@@ -390,12 +389,12 @@
         }
 
         .panel-footer h3 {
-            font-size: 32px;
+            font-size: 20px;
         }
 
         .panel-footer h4 {
             color: #aaa;
-            font-size: 14px;
+            font-size: 8px;
         }
 
         .panel-footer .btn {
