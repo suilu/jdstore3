@@ -17,6 +17,8 @@
 //= require bootstrap/dropdown
 
 //= require_tree .
+//= require social-share-button
+//= require social-share-button/wechat
 
 
 // 图片切换

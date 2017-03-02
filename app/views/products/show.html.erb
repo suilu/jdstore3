@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 
 <body>
   <div class="container">
+
         <div class="card">
             <div class="container-fliud">
                 <div class="wrapper row">
@@ -119,6 +121,8 @@
                                 <%= link_to("Favor", favorites_path(product_id: @product), method: :post) %>
                             </button>
                             <% end %>
+
+                            <p><%= social_share_button_tag(@product.title) %></p>
                             <div>
                                 <h3 class="comments_title ">
                                     <%= @product.comments.count %>
@@ -136,7 +140,6 @@
             </div>
         </div>
     </div>
-</body>
 
 
 
