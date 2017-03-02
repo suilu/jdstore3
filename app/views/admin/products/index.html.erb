@@ -1,3 +1,6 @@
+<body>
+
+<div class="container-order">
 <h2> Product List </h2>
 <div class="pull-right" style="padding-bottom: 20px;">
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
@@ -34,3 +37,44 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</body>
+<style >
+h2{
+  text-align: center;
+  padding-top: 30px;
+}
+.container-order{
+
+background-color: #fff;
+background-color: #fff;
+margin-top: -30px;
+margin-left: -10px;
+margin-right: 10px;
+padding-left: 30px;
+padding-right: 30px;
+padding-bottom: 100px;
+margin-bottom: 20px;
+
+border-radius: 16px;
+padding-top: 10px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(221, 221, 221);
+}
+body{
+  margin-top: 120px;
+  background-color: #fffaed;
+}
+thead{
+
+  background-color: #bcbcbc;
+}
+th{
+  text-align: center;
+}
+tbody{
+  text-align: center;
+  background-color: #f0f0f0;
+}
+</style>

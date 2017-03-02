@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
-//= require bootstrap/modal
+
 //= require_tree .
 //= require social-share-button
 //= require social-share-button/wechat

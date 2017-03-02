@@ -1,0 +1,64 @@
+<body>
+<div class="container-signup">
+  <h2>注册</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "注册" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+</body>
+
+<style >
+.container-signup{
+  width: 350px;
+
+
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ffffff;
+
+    margin-top: 90px;
+    margin-left: 550px;
+    margin-right: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+
+}
+.form-actions .btn{
+  width: 250px;
+  border-radius: 5px;
+}
+
+
+.form-actions .btn{
+  width: 250px;
+  border-radius: 5px;
+}
+body{
+  background-color: #fffaed;
+}
+
+
+
+
+</style>

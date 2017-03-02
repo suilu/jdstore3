@@ -1,8 +1,14 @@
 
-    <div class="containter ">
-        <div class=" row row2 ">
+<!DOCTYPE html>
+<body>
+    <!-- 图标搜索框 -->
+        <div class="row row2 ">
+          <!-- logo and search -->
+
+   
             <div class="col-sm-5 text-left">
-                <div id="logo" class="logo">
+              <!-- logo  -->
+                <div  class="logo">
                     <a href="/">
                         <i class="fa fa-paw" aria-hidden="true"></i>
                         <span>
@@ -10,517 +16,570 @@
                         </span>
                     </a>
                 </div>
+                <!-- end -->
+
+                <!-- search for -->
+                <div class="search">
+                    <%= form_tag products_path, :method => "get" do %>
+                    <div class="searchform">
+                        <%= text_field_tag :search, params[:search], placeholder: "请输入宠物名称", class: "searchbox"%>
+                        <span>
+                            <button type="submit" class="searchbutton">
+                              <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <% end %>
+                </div>
+                <!-- end search -->
             </div>
-
-
+            <!-- end logo & search -->
         </div>
 
-        <div class="container-1">
+
+
+
+        <!-- 首页大图 -->
+        <div class="container-photo">
             <div class="row1">
-                <p>
-                    &nbsp; The warmest
-                    <br>
-                    accompany to you</p>
+                <h3>一位朋友,&nbsp;一个家人 </h3>
+
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;一份温暖的陪伴</h2>
             </div>
 
-            <button type="button" class="btn btn-primary btn-round-lg btn-lg">
-
-                <a href="/products"><strong>Shop Now</strong></a>
+            <button type="button" class="button-shop">
+                <a href="/products">
+                    <strong>Shop Now</strong></a>
             </button>
-
-
+            <div class="small-photo">
+            <img src="https://ooo.0o0.ooo/2017/03/02/58b76311d2699.png" width="40px";>
+            <p class="dogspeak">我和狗狗爱着你~</p>
+          </div>
         </div>
 
-        <!-- search for -->
+        <!-- end -->
 
-        <div class="searchfor">
 
-            <%= form_tag products_path, :method => "get" do %>
-            <div class="searchform">
-                <%= text_field_tag :search, params[:search], placeholder: "Searching...", class: "searchbox"%>
-                <span>
-                    <button type="submit" class="btn2 btn2-default nav-search">
-                        <span >Search</span>
 
-                    </button>
-                    <!-- <input type="submit" value="点 击" class="mike"> -->
-                </span>
+
+
+
+
+
+
+        <!-- 服务保障 -->
+        <section class="service-promise">
+            <div class="container-service" >
+              <div>
+                <div class="service-title text-center">
+                    <h3>向你承诺</h3>
+                    <hr>
+                </div>
+                <!-- end general title -->
+
+                <div class="row module-wrapper text-center">
+                    <div class="col-md-4 col-sm-3 why-us">
+                        <img src="https://ooo.0o0.ooo/2017/03/01/58b6d6dc4c5e3.png" width="250px"; >
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p class="promise-title">
+                            <strong>担保交易</strong>
+                        </p>
+                        <p class="promise-para">我们给小主提供了15天时间的健康担保期，犬瘟细小等疾病包退货，宠物与描述不符退货退款。
+                        </p>
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+                    <!-- our services -->
+                    <div class="col-md-4 col-sm-3 why-us">
+                        <img src="https://ooo.0o0.ooo/2017/03/01/58b6d2100faaa.jpeg" width="250px"; >
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p class="promise-title">  <strong>
+                                健康保证
+                            </strong>
+                        </p>
+                        <p class="promise-para">所有狗狗享有30天专业宠物咨询团队一对一跟踪售后，我们给小主提供24小时的健康咨询</p>
+                        <!--<p>所有宠物包30天专业宠物咨询团队一对一跟踪售后，提供24小时健康咨询。</p>-->
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-4 col-sm-3 why-us">
+                        <img src="https://ooo.0o0.ooo/2017/03/01/58b6d0ebca1a0.jpg" width="250px"; >
+                        <div>
+                            &nbsp;
+                        </div>
+                        <p class="promise-title">
+                            <strong>服务保障</strong>
+                        </p>
+                        <p class="promise-para">我们提供一对一宠物咨询服务，手把手教你养狗。还有在线宠物医生提供实时免费咨询。
+                        </p>
+                        <!--<p>一对一宠物咨询服务，手把手教你养狗。在线宠物医生提供实时免费咨询。
+                        </p>-->
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                    <!-- end col -->
+                    <!--
+                    <div class="col-md-6 col-sm-3 why-us">
+                        <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcupv24kv7j303c02vq2v.jpg" alt="">
+                        <div >
+                            &nbsp;
+                        </div>
+                        <p>
+                            <strong>担保交易</strong>
+                        </p>
+                        <p>享受15天健康担保期，犬瘟细小等疾病退货，宠物与描述不符合退货退款。
+                        </p>
+                        <a href="#" class="readmore">了解更多</a>
+                    </div>
+                  -->
+                    <!-- end col -->
+                </div>
+                <!-- end module-wrapper -->
             </div>
-            <% end %>
+            <!-- end container -->
+        </section>
 
-        </div>
 
         <!-- title -->
-        <div class="container">
-            <div class="container-4 text-center">
-              <h1 class="widget-title">
-
-                  Top recommend
-              </h1>
-              <!--<h4>
+        <div class="container-hot">
+            <div class="container-dogs text-center">
+                <h3 class="widget-title">
+                    猜你喜欢
+                </h3>
+                <!--<h4>
                   <em>Choose a payment plan that works for you</em>
               </h4>-->
-              <hr>
-              <!-- hot recommend -->
-              <div class="fl">
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_1.jpg" width="400" height="250"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_2.jpg" width="250" height="254"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_3.jpg" width="250" height="254"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_5.jpg" width="250" height="254"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_6.jpg" width="250" height="254"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_7.jpg" width="250" height="254"></a>
-                    <a href="/products"><img src="http://img1.dog126.com/images/dog_8.jpg" width="250" height="254"></a>
-                   </div>
+                <hr>
+                <!-- hot recommend -->
+                <div class="fl">
+                  <div class="col-md-12 products-image">
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_2.jpg" width="254" height="250"></a>
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_3.jpg" width="254" height="250"></a>
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_5.jpg" width="254" height="250"></a>
+                    <div class="col-md-12 products-image">
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_6.jpg" width="254" height="250"></a>
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_7.jpg" width="254" height="250"></a>
+                    <a href="/products"><img src="http://img1.dog126.com/images/dog_8.jpg" width="254" height="250"></a>
+                  </div>
+                </div>
+            </div>
+        </div>
 
-                 </div>
-               </div>
+        <!-- our promise -->
 
-<!-- our promise -->
-<section class="section white">
-    <div class="container">
-        <div class="general-title text-center">
-            <h1>Our services</h1>
+
+
+        <!-- Customer reviews-->
+        <div class="container-customer text-center">
+            <h2 class="customer-title">
+              听听各位小主怎么说
+            </h2>
 
             <hr>
 
-        </div>
-        <!-- end general title -->
+            <div class="col-md-3"><img
+                width="148"
+                height="148"
+                src="https://ooo.0o0.ooo/2017/03/01/58b68cbd3310c.png"
+              class="img-circle person">
+                <h3 class="person-name">查理·布朗</h3>
+                <div class="bne-testimonial-description">
+                    <p>史努比是我的朋友，我的朋友并不多，懂我的人也很少，史努比的陪伴让我感觉不孤单。。
 
-        <div class="row module-wrapper text-center">
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fcupqsp8swj303c02vgli.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>纯种保障</strong>
-                </p>
-                <p>签协议保证所售宠物狗为纯种犬，如果出现不纯种问题终身包退换。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
-
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww4.sinaimg.cn/large/006tNc79ly1fcupsl6pqqj303c02vgli.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>
-                        健康保证
-                    </strong>
-                </p>
-                <p>所有宠物包30天专业宠物咨询团队一对一跟踪售后，提供24小时健康咨询。</p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
-
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcuptse2jmj303c02vaa3.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>服务保障</strong>
-                </p>
-                <p>一对一宠物咨询服务，手把手教你养狗。在线宠物医生提供实时免费咨询。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
-
-            <div class="col-md-3 col-sm-3 why-us">
-                <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcupv24kv7j303c02vq2v.jpg" alt="">
-                <div >
-                    &nbsp;
-                </div>
-                <p>
-                    <strong>担保交易</strong>
-                </p>
-                <p>享受15天健康担保期，犬瘟细小等疾病退货，宠物与描述不符合退货退款。
-                </p>
-                <a href="#" class="readmore">了解更多</a>
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- end module-wrapper -->
-    </div>
-    <!-- end container -->
-</section>
-
-
-
-
-
-
-
-            <div class="container-5 text-center">
-                <h1 class="widget-title">
-
-                    Pets Tips
-                </h1>
-
-                <h4>
-                    <em>A friend around me and verify my growth</em>
-                </h4>
-                  <hr>
-
-
-            <div class="row3 ">
-                <div class="col-sm-3">
-                    <div class="panel-body"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcong0n2cnj31kw2da1l0.jpg" class="img-responsive"  alt="Image"></div>
-                    <h4 >
-                        <em>
-                            Published on Februery</em>
-                    </h4>
-                    <p>I was looking for a friend who I could commpany with he or she fore
                     </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-3"><img
+                width="148"
+                height="148"
+                src="https://ooo.0o0.ooo/2017/03/02/58b78de88bf7d.png"
+                   class="img-circle person"
+              >
+                <h3 class="person-name">蜡笔小新</h3>
+                <div class="bne-testimonial-description">
+                    <p>大家好，我是汪星人蜡笔小新。这是我的狗狗，他叫小白！他是我很重要的伙伴！
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="col-md-3"><img
+                width="148"
+                height="148"
+                src="https://ooo.0o0.ooo/2017/03/02/58b7918b2a35f.png"
+                  class="img-circle person"
+                >
+                <h3 class="person-name">汪星人</h3>
+                <div class="bne-testimonial-description">
+                    <p>Lucky Dog是一个很不错的网站，狗狗素质很高，非常喜欢。
+
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- pets tips -->
+
+        <div class="container-tip text-center">
+            <h3>
+                狗狗小贴士
+            </h3>
+            <hr>
+
+            <div >
+                <div class="col-sm-3">
+                    <div class="panel-body"><img src="https://ww4.sinaimg.cn/large/006tNc79gy1fcong0n2cnj31kw2da1l0.jpg" class="img-responsive" alt="Image"></div>
+                    <h4><em>
+
+                            该贴发布于2月3日</em>
+                    </h4>
+                    <a href="/story">养狗小常识：狗狗们不得不说的小心思！
+                    </a>
                 </div>
                 <div class="col-sm-6 text-center">
                     <div class="panel-body"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fconv8f3r8j31kw11xx6q.jpg" class="img-responsive" alt="Image"></div>
 
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                        <em>发布于3月6日</em>
                     </h4>
-                    <p>I was looking for a coffee machine that is not too pricy for my limited budget, but at the same time not too cheap. Because everyone knows,
-                        <br>that no good quality and durability are attached to a low price tag.</p>
+                    <p>英国一狗狗因微笑走红网络</p>
                 </div>
-
                 <div class="col-sm-3">
-                    <div class="panel-body"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fcons2zvcqj31kw11ye85.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-
+                    <div class="panel-body"><img src="https://ooo.0o0.ooo/2017/03/02/58b76aac7fc78.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                      <em>Published on Februery</em>
                     </h4>
-                    <p>I was looking for a coffee machine that is not too pricy for my limited budget.
+                    <p>The Unlikely Friendship Of A Dog And An Owl
                     </p>
                 </div>
                 <div class="col-sm-3">
                     <div class="panel-body"><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fconzmmymqj31kw11x7wk.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-
                     <h4>
-                        <em>
-                            Published on Februery</em>
+                        <em> Published on Februery</em>
                     </h4>
-
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
-
-    <div class="container-7 text-center">
-        <h1 class="widget-title">
-          <em>Customer reviews</em>
-        </h1>
-
-          <hr>
-
-        <div class="flex-content"><img
-            width="148"
-            height="148"
-            src="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg"
-            class="bne-testimonial-featured-image circle wp-post-image"
-            alt=" "
-            srcset="https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1-119x119.jpg 119w, https://ld-wp.template-help.com/woocommerce_58649/wp-content/uploads/2016/04/testimonial_img_1.jpg 148w"
-            sizes="(max-width: 148px) 100vw, 148px"
-            draggable="false">
-            <h3 class="bne-testimonial-heading">Miss Li</h3>
-            <div class="bne-testimonial-description">
-                <p>There is an old man in my family. Children have their own things to do, very few accompany around.
-                  <br>It's hard to find time to pick a dog for my family. Thank you Lucky Dog, let me save a lot of energy. Let my old man more than a loved one!
-                  </p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-
+</body>
 
 <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
+/* Remove the navbar's default rounded borders and increase the bottom margin */
 
-    /* Remove the jumbotron's default bottom margin */
-    .row1 {
-        margin-top: 34px;
-
-    }
-    .row2 {
-        margin: 15px -2000px 20px -15px;
-
-    }
-    .row2 i {
-        font-size: 50px;
-        color: #f65e65;
-    }
-    .row2 span {
-        font-size: 25px;
-        color: #000;
-    }
-    .container-1 .btn {
-        background-color: #f65e65;
-
-    }
-    .container-1 .btn-round-lg {
-        border-radius: 22.7px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 3px;
-        margin-top: 80px;
-        margin-left: 50px;
-        font-size: 30px;
-
-    }
-    .container-1 {
-
-        margin-right: -15px;
-        margin-left: -15px;
-        margin-bottom: 60px;
-        width: inherit;
-
-        height: 800px;
-
-      font-family: sans-serif;
-        padding-left: 200px;
-        font-size: 50px;
-        padding-left: 200px;
-        padding-top: 200px;
-        background-image: url("https://ooo.0o0.ooo/2017/02/19/58a99f31c9a57.jpg");
-        background-repeat:round;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    .footer {
-        background-color: #c0c0c0;
-        padding: 25px;
-    }
-
-    .thumbnail {
-        padding: 0 0 15px;
-        border: none;
-        border-radius: 0;
-    }
-
-    .thumbnail {
-        padding: 0 0 15px;
-        border: none;
-        border-radius: 0;
-    }
-
-    .thumbnail img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-    }
-
-    .panel {
-        border: 1px solid #07b0ba;
-        border-radius: 0;
-        transition: box-shadow 0.5s;
-    }
-    .panel:hover {
-        box-shadow: 5px 0 40px rgba(0,0,0, .2);
-    }
-    .panel-footer .btn:hover {
-        border: 1px solid #07b0ba;
-        background-color: #fff !important;
-        color: #07b0ba;
-    }
-
-    .panel-heading {
-        color: #fff !important;
-        background-color: #07b0ba !important;
-        padding: 25px;
-        border-bottom: 1px solid transparent;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .panel-footer {
-        background-color: #fff !important;
-    }
-
-    .panel-footer h3 {
-        font-size: 32px;
-    }
-
-    .panel-footer h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
-
-    .panel-footer .btn {
-        margin: 15px 0;
-        background-color: #07b0ba;
-        color: #fff;
-
-    }
-    .container-4 {
-        margin-top: 100px;
-        margin-bottom: 60px;
-    }
-    .container-5 {
-        margin-top: 20px;
-        margin-bottom: 60px;
-        margin-left: 170px;
-        margin-right: 170px;
-
-    }
-
-
-    .container-1 h1 {
-        font-size: 100px;
-    }
-    .btn-lg1 {
-        color: #fff; //字体颜色
-        background-color: #ff8a2b; //背景颜色
-        border-color: #EF6C00; //边框颜色
-    }
-    .container-7{
-      margin-bottom: 70px;
-    }
-    .container-7 h3 {
-        font-family: 'Playfair Display';
-        font-style: italic;
-        font-weight: 900;
-        font-size: 22px;
-        line-height: 1.3;
-        letter-spacing: 0;
-        color: #f65e65;
-
-    }
-    .container-7 h1 {
-
-        margin-top: 100px;
-        margin-bottom: 30px;
-        font-size: 40px;
-    }
-    .container-7 img {
-      margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .container-7 p {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .bg-grey {
-        margin-top: 60px;
-    }
-
-    .container-8 {
-        margin-top: 30px;
-        margin-bottom: 70px;
-        margin-left: 150px;
-    }
-    .container-9 {
-        margin-top: 20px;
-    }
-
-    .container-1 .row1 {
-        color: #fff;
-    }
-    /*  search for */
-    .searchform {
-        position: relative;
-
-        text-align: center;
-    }
-    .searchbox {
-
-        height: 45px;
-        width: 600px;
-        font: 16px arial;
-        border: 1px solid #b8b8b8;
-
-    }
-    .btn2 {
-        display: inline-block;
-        margin-bottom: 0;
-        font-weight: normal;
-        text-align: center;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        background-image: none;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        margin-left: -4px;
-        margin-top: -2px;
-        font-size: 20px;
-        line-height: 1.42857143;
-        padding: 10px 30px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        border-radius: 1.5px;
-    }
-    .btn2:focus,
-    .btn2:hover {
-        border: 1px solid #f65e65;
-        background-color: #fff;
-        color: #000;
-    }
-    .btn2-default {
-        color: #fff;
-        background-color: #f65e65;
-        border-color: #f65e65;
-    }
-    .btn  a{
-      color: #fff;
-      font-family: sans-serif;
-    }
-
-.section{
-  padding: 80px 0;
+/* Remove the jumbotron's default bottom margin */
+.promise-title{
+    color: #f65e65;
 }
-.general-title hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.promise-para{
+  font-size: 11px;
 }
-.container-4 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.service-title  a {
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  font-size: 12px;
 }
-.container-5 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+.row1 {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 500px;
+    padding: 12px 25px;
+    margin-left: -60px;
+    font-size: 30px;
+    font-family: sans-serif;
+    line-height: 40px;
+
 }
-h4{
-  color: #999999;
+
+
+.row2{
+  width: 1300px;
+    margin: 0 auto;
+     margin-top: 50px;
+     margin-bottom: 4px;
+
+
+
 }
-.why-us a{
-  color: #f65e65;
+.row2 .logo{
+  float: left;
+   margin-right: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
 }
-.why-us{
-  margin-top: 40px;
-  font-size: 15px;
+.row2 a{
+  text-decoration: none;
 }
-.why-us img{
-  width: 140px;
+.row2 i {
+    font-size: 50px;
+    color: #f65e65;
 }
-.container-4 .fl{
-  margin-top: 50px;
-  margin-bottom: 60px;
+.row2 span {
+    font-size: 25px;
+    color: #000;
+
 }
-.container-7 hr{
-  width: 100px;
-  border-width: 3px;
-  margin: 25px auto;
-  border-color: #f65e65;
+
+/**** 首页大图 ****/
+
+.container-photo img{
+  margin-top: 300px;
+  margin-left: 1050px;
+}
+.container-photo .dogspeak{
+  color: #fff;
+  font-size: 12px;
+  margin-top: -20px;
+  margin-left: 1100px;
+
+}
+.container-photo .btn {
+    background-color: #f65e65;
+
+}
+
+.container-photo .btn-round-lg {
+    border-radius: 22.7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 3px;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 30px;
+
+}
+.container-photo {
+  clear: both;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: inherit;
+    height: 800px;
+    font-family: sans-serif;
+    padding-left: 200px;
+    font-size: 50px;
+    padding-left: 200px;
+    padding-top: 200px;
+    background-image: url("https://ooo.0o0.ooo/2017/02/19/58a99f31c9a57.jpg");
+    background-repeat: round;
+
+}
+
+.container-photo h2 {
+    font-size: 53px;
+}
+.container-photo .row1 {
+    color: #fff;
+}
+
+
+
+/*  search for */
+.search{
+  float: left;
+  width: 450px;
+  position: relative;
+  margin-left: 810px;
+  margin-top: -4.5em;
+
+}
+
+.searchbox {
+    height: 40px;
+    width: 450px;
+    padding: 5px 30px;
+    border-style: solid;
+    border-color: #f65e65;
+    border-radius: 20px;
+    border-width: 2px;
+    font: 14px arial;
+
+
+}
+.searchbutton {
+
+  width:  45px;
+ height: 40px;
+ border:  none;
+ background: none;
+ font-family: "Microsoft YaHei";
+ font-size:  2px;
+ position:  absolute;
+ cursor:  pointer;
+ right: 0;
+ top:  0;
+}
+.searchbutton .fa-search{
+  font-size: 20px;
+}
+.button-shop{
+
+  background: none;
+  font-size: 20px;
+  padding: 8px 15px;
+  color: #fff;
+  border: none;
+    background-color: rgba(246, 94, 101, 0.8);
+  border-radius: 8px;
+  transition: 0.1s;
+}
+
+
+/* On hover, the color of .btn will transition to white with black text */
+.button-shop:focus,
+.button-shop:hover {
+    background-color: #f65e65;
+
+}
+
+
+.button-shop a {
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+
+h4 {
+    color: #999999;
+    font-size: 10px;
+
+}
+
+/*** 服务保障 ****/
+.service-promise {
+  margin: -15px;
+    padding: 60px 0;
+    background-color: #f0f0f0;
+}
+.container-service{
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-radius: 16px;
+  margin: -10px 100px;
+  padding: 30px 60px 100px 60px;
+  background-color: #fcfcfc;
+
+}
+.service-title hr {
+    width: 100px;
+    border-width: 3px;
+    margin: 25px auto;
+    border-color: #f65e65;
+}
+.container-hot{
+  padding-top: 10px;
+  width: 1500px;
+  height: 700px;
+  margin: 15px -10px 20px -15px ;
+  background-color: #f9f9f9;
+
+}
+.container-hot h3{
+  margin-left: -95px;
+}
+
+.container-hot img{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #efefef;
+  margin: 0px -2px;
+
+}
+.container-hot hr {
+    width: 100px;
+    border-width: 3px;
+    margin-top: 25px;
+    margin-left: 650px;
+    border-color: #f65e65;
+}
+.container-hot .fl {
+    margin-left: -7em;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+
+/***** customer reviews ******/
+.container-customer {
+    background-color: rgb(59, 61, 66);
+    color: #fff;
+  margin-left: -30px;
+  margin-right: -40px;
+  margin-top: 600px;
+  padding-top: 40px;
+
+  padding-bottom: 400px;
+}
+.container-customer h3 {
+  font-size: 2px;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: 0;
+  padding-left: 350px;
+
+
+}
+
+.container-customer h2{
+  font-size: 23px;
+  margin-left: -100px;
+}
+
+
+.container-customer img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  margin-left: 245px;
+
+}
+.container-customer p {
+  font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 240px;
+    margin-right: -15px;
+}
+.container-customer hr {
+    width: 100px;
+    border-width: 3px;
+  margin-top: 25px;
+
+  margin-bottom: 20px;
+  margin-left: 680px;
+
+    border-color: #f65e65;
+}
+
+
+/***** pets tips *****/
+.container-tip {
+
+    margin: 70px 170px 20px 120px;
+    padding-bottom: 600px;
+
+}
+
+.container-tip hr {
+    width: 100px;
+    border-width: 3px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+    margin-left: 530px;
+    border-color: #f65e65;
+}
+.container-tip h3{
+  margin-left: -50px;
 }
 
 </style>

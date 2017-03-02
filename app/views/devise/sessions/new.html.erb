@@ -1,0 +1,55 @@
+<body>
+<div class="container-login">
+<h2>登入</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :email, required: false, autofocus: true %>
+    <%= f.input :password, required: false %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "登入" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+</body>
+
+
+<style >
+.container-login{
+  width: 350px;
+
+
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ffffff;
+
+    margin-top: 90px;
+    margin-left: 550px;
+    margin-right: 300px;
+
+    margin-bottom: 20px;
+    border-radius: 16px;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+
+}
+.form-actions .btn{
+  width: 250px;
+  border-radius: 5px;
+}
+body{
+  background-color: #fffaed;
+}
+
+
+
+</style>
