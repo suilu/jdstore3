@@ -34,7 +34,7 @@
         <!-- end logo & search -->
     </div>
 
-    <!-- 首页大图 
+    <!-- 首页大图
     <div class="container-photo">
         <div class="row1">
             <h3>一位朋友,&nbsp;一个家人
@@ -422,7 +422,15 @@
     /* Remove the navbar's default rounded borders and increase the bottom margin */
 
     /* Remove the jumbotron's default bottom margin */
+#bootstrap-touch-slider{
+  margin-left: -30px;
+}
+#bootstrap-touch-slider .carousel-indicators{
+  margin-right: 800px;
 
+
+
+}
     .promise-title {
         color: #f65e65;
     }
@@ -877,75 +885,6 @@
         right: 45%;
     }
 
-    /*---------- INDICATORS CONTROL ----------*/
-    .indicators-line > .carousel-indicators {
-        right: 45%;
-        bottom: 3%;
-        left: auto;
-        width: 90%;
-        height: 20px;
-        font-size: 0;
-        overflow-x: auto;
-        text-align: right;
-        overflow-y: hidden;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 1px;
-        white-space: nowrap;
-    }
-    .indicators-line > .carousel-indicators li {
-        padding: 0;
-        width: 15px;
-        height: 15px;
-        border: 1px solid rgb(158, 158, 158);
-        text-indent: 0;
-        overflow: hidden;
-        text-align: left;
-        position: relative;
-        letter-spacing: 1px;
-        background: rgb(158, 158, 158);
-        -webkit-font-smoothing: antialiased;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        margin-right: 5px;
-        -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-        transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-        z-index: 10;
-        cursor: pointer;
-    }
-    .indicators-line > .carousel-indicators li:last-child {
-        margin-right: 0;
-    }
-    .indicators-line > .carousel-indicators .active {
-        margin: 1px 5px 1px 1px;
-        box-shadow: 0 0 0 2px #fff;
-        background-color: transparent;
-        position: relative;
-        -webkit-transition: box-shadow 0.3s ease;
-        -moz-transition: box-shadow 0.3s ease;
-        -o-transition: box-shadow 0.3s ease;
-        transition: box-shadow 0.3s ease;
-        -webkit-transition: background-color 0.3s ease;
-        -moz-transition: background-color 0.3s ease;
-        -o-transition: background-color 0.3s ease;
-        transition: background-color 0.3s ease;
-
-    }
-    .indicators-line > .carousel-indicators .active:before {
-        transform: scale(0.5);
-        background-color: #fff;
-        content: "";
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        -webkit-transition: background-color 0.3s ease;
-        -moz-transition: background-color 0.3s ease;
-        -o-transition: background-color 0.3s ease;
-        transition: background-color 0.3s ease;
-    }
 
     /*---------- SLIDE CAPTION ----------*/
     .slide_style_left {
