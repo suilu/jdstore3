@@ -57,3 +57,18 @@ $size: 30px;
     }
   }
 }
+
+
+.carousel {
+  width: 1500px;
+  height: 800px;
+  margin: 0 auto;
+}
+.carousel .item {
+  height: 800px;
+}
+.carousel-inner {
+  margin-left: -15px;
+  width: 1500px;
+  height: 800px;
+}
